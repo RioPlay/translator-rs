@@ -19,7 +19,7 @@ image-translate = ["dep:image", "dep:fax"]
 translator-core = { path = "../translator-core", features = ["script-from-unicode"] }
 translator-render = { path = "../translator-render" }
 translator-translate = { path = "../translator-translate" }
-lopdf = { version = "0.40", default-features = false }
+lopdf = { version = "0.42", default-features = false }
 subsetter = { version = "0.2", default-features = false }
 rustybuzz = { version = "0.20", default-features = false, features = ["std"] }
 log = "0.4"
@@ -27,7 +27,7 @@ image = { version = "0.25", optional = true, default-features = false, features 
 fax = { version = "0.2", optional = true }
 
 [target.'cfg(target_os = "android")'.dependencies]
-mupdf = { git = "https://github.com/DavidVentura/mupdf-rs", default-features = false, features = [] }
+mupdf = { git = "https://github.com/RioPlay/mupdf-rs", rev = "285b012811563c412052df685d2b872c9a95c82c", default-features = false, features = [] }
 
 [target.'cfg(not(target_os = "android"))'.dependencies]
-mupdf = { git = "https://github.com/DavidVentura/mupdf-rs", default-features = false, features = ["system-fonts"] }
+mupdf = { git = "https://github.com/RioPlay/mupdf-rs", rev = "285b012811563c412052df685d2b872c9a95c82c", default-features = false, features = ["system-fonts"] }

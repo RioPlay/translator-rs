@@ -11,7 +11,7 @@ path = "src/lib.rs"
 [dependencies]
 translator-core = { path = "../translator-core", features = ["script-from-unicode"] }
 slimt-sys = { git = "https://github.com/DavidVentura/slimt-sys" }
-cld2 = { git = "https://github.com/DavidVentura/rust-cld2" }
+cld2 = { git = "https://github.com/RioPlay/rust-cld2", rev = "7c9be0fcd97a77d65a47a14894078a6110b115ad" }
 regex = "1"
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"

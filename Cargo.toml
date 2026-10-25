@@ -132,7 +132,7 @@ translator-mucab = { path = "crates/translator-mucab", optional = true }
 translator-transliterate = { path = "crates/translator-transliterate", optional = true }
 translator-tts = { path = "crates/translator-tts", optional = true }
 piper-rs = { git = "https://github.com/DavidVentura/piper-rs", optional = true, features = ["japanese", "fst-normalization", "mnn"] }
-lopdf = { version = "0.40", optional = true, default-features = false }
+lopdf = { version = "0.42", optional = true, default-features = false }
 ttf-parser = { version = "0.25", optional = true, default-features = false, features = ["std", "opentype-layout", "variable-fonts"] }
 subsetter = { version = "0.2", optional = true, default-features = false }
 rustybuzz = { version = "0.20", optional = true, default-features = false, features = ["std"] }
@@ -161,10 +161,10 @@ khronos-egl = { version = "6", features = ["dynamic"] }
 glow = { version = "0.17", default-features = false }
 
 [target.'cfg(target_os = "android")'.dependencies]
-mupdf = { git = "https://github.com/DavidVentura/mupdf-rs", optional = true, default-features = false, features = [] }
+mupdf = { git = "https://github.com/RioPlay/mupdf-rs", rev = "285b012811563c412052df685d2b872c9a95c82c", optional = true, default-features = false, features = [] }
 
 [target.'cfg(not(target_os = "android"))'.dependencies]
-mupdf = { git = "https://github.com/DavidVentura/mupdf-rs", optional = true, default-features = false, features = ["system-fonts"] }
+mupdf = { git = "https://github.com/RioPlay/mupdf-rs", rev = "285b012811563c412052df685d2b872c9a95c82c", optional = true, default-features = false, features = ["system-fonts"] }
 
 
 [[test]]
